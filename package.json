@@ -1,0 +1,20 @@
+{
+  "name": "data-structures-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stack.js",
+  "scripts": {
+    "test": "tsc --outDir js && ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.13.0"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1",
+    "lodash.isequal": "^4.1.1",
+    "tape": "^4.5.1"
+  }
+}
