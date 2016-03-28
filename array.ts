@@ -2,7 +2,6 @@
 import * as _ from 'lodash'
 
 interface arrayType {
-  _array                           : Array<any>
   length()                         : number
   get(index: number)               : any
   append(item: any)                : arrayType
@@ -15,8 +14,6 @@ interface arrayType {
 const array = () => {
 
   const prototype: arrayType = {
-
-    _array: [],
 
     length() {
       return this._array.length
@@ -63,7 +60,7 @@ const array = () => {
     }
   }
 
-  return Object.create(prototype)
+  return Object.assign(Object.create(prototype), { _array: [] })
 
 }
 

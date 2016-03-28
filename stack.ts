@@ -8,19 +8,16 @@ Array-based Stack
 import * as _ from 'lodash'
 
 interface stackType {
-  _stack          : Array<any>,
   size()          : number,
   push(item: any) : stackType,
   pop(item: any)  : any,
   peek()          : any,
-  isEqual(item: stackType) : boolean
+  isEqual(any)    : boolean
 }
 
 const stack = () => {
 
   const prototype: stackType = {
-
-    _stack: [],
 
     size() {
       return this._stack.length
@@ -53,7 +50,7 @@ const stack = () => {
 
   }
 
-  return Object.create(prototype)
+  return Object.assign(Object.create(prototype), { _stack: [] })
 
 }
 
