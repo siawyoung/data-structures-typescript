@@ -1,6 +1,4 @@
 
-import * as _ from 'lodash'
-
 interface graphType {
   addNode(item: any): void
   removeNode(item: any): void

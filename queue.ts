@@ -1,9 +1,9 @@
 
 interface queueType {
-  length(): number
-  enqueue(item: any): queueType
-  dequeue(item: any): any
-  peek(): any
+  length()           : number
+  enqueue(item: any) : queueType
+  dequeue(item: any) : any
+  peek()             : any
 }
 
 const queue = () => {

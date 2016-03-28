@@ -1,18 +1,24 @@
 
+/*
+
+Binary search tree
+
+*/
+
 interface binaryTreeNode {
   minValue(): any,
 }
 
 interface binarySearchTree {
   root()            : binaryTreeNode,
+  size()            : number,
   add(item: any)    : binarySearchTree,
   search(item: any) : boolean,
   remove(item: any) : binarySearchTree,
+  isEqual(node: binarySearchTree): boolean
   preOrderTraversal(fn: (item: binaryTreeNode)  => void) : void,
   inOrderTraversal(fn: (item: binaryTreeNode)   => void) : void,
   postOrderTraversal(fn: (item: binaryTreeNode) => void) : void,
-  size() : number,
-  isEqual(node: binarySearchTree): boolean
 }
 
 const binaryTreeNode = (item, leftItem?, rightItem?) => {
